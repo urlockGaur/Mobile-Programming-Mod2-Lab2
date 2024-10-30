@@ -1,0 +1,44 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="BMIapp.MainPage">
+
+    <ScrollView>
+        <VerticalStackLayout
+            Padding="30,0"
+            Spacing="25">
+            <Image
+                Source="dotnet_bot.png"
+                HeightRequest="185"
+                Aspect="AspectFit"
+                SemanticProperties.Description="dot net bot in a race car number eight" />
+
+            <Label
+                Text="BMI Calculator"
+                Style="{StaticResource Headline}"
+                SemanticProperties.HeadingLevel="Level1" />
+
+            <Editor 
+                x:Name="Inp_weight"
+                Placeholder="Please enter weight in pounds"
+                PlaceholderColor="Green" />
+            <Editor 
+                x:Name="Inp_height"
+                Placeholder="Enter height in inches"
+                PlaceholderColor="Green" />
+
+            <Button
+                x:Name="CalculateBMIBtn"
+                Text="Calculate BMI" 
+                SemanticProperties.Hint="Calculates your BMI based on weight and height"
+                Clicked="OnCalculateBMIClicked"
+                HorizontalOptions="Fill" />
+
+            <Label
+                x:Name="BmiResult"
+                Text="Your BMI will be displayed here."
+                Style="{StaticResource SubHeadline}" />
+
+        </VerticalStackLayout>
+    </ScrollView>
+</ContentPage>
